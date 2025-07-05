@@ -28,6 +28,7 @@ function App() {
 </div>
 <ProjectOverview/>
 <LocationAdvantage/>
+
 <Amenities/>
     <div className='max-w-[1200px] mx-auto py-5 px-5'>
         <h2 className="text-3xl font-bold text-center text-[#24447c] mb-2">Community and Lifestyle</h2>
