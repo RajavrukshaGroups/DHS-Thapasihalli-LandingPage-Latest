@@ -3,8 +3,8 @@ import projectname from "../../assets/FASF.png";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#a9e4f6]">
-      <div className="max-w-[1440px] mx-auto w-full flex flex-col sm:flex-row items-center sm:justify-between px-4 sm:px-6 py-3 h-auto sm:h-[120px]">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white">
+      <div className="max-w-[1440px] mx-auto w-full flex flex-col sm:flex-row items-center sm:justify-between px-4 sm:px-6 py-3 h-auto sm:h-[142px]">
         {/* Left: Logo + Project Name */}
         <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4">
           <img
@@ -44,5 +44,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;
