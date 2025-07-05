@@ -9,11 +9,16 @@ import PriceChart from './components/PriceChart.jsx/priceChart';
 import Footer from './components/footer/footer';
 import ContactForm from './components/contactForm/contactForm';
 import { Toaster } from 'react-hot-toast';
+import ContactFormPopup from './components/contactFormPopup';
 function App() {
   // console.log()
   return (
     <>
     <Toaster position="top-right" reverseOrder={false} />
+    {/* <div className="min-h-screen bg-gray-100"> */}
+      {/* Your other components */}
+      <ContactFormPopup />
+    {/* </div> */}
     <Header/>
 <div className="pt-28 md:pt-0 w-full relative">
   {/* Image */}

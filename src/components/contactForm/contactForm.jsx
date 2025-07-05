@@ -1,7 +1,6 @@
-import React from 'react'
 import { useState } from "react";
 import toast from "react-hot-toast";
-
+import ReCAPTCHA from "react-google-recaptcha";
 function ContactForm() {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -11,14 +10,27 @@ function ContactForm() {
     message: "",
     subject: "Thapasihalli",
   });
+  const [isLoading, setIsLoading] = useState(false);
+const [captchaToken, setCaptchaToken] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+    const handleCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!captchaToken) {
+      toast.error("Please complete the CAPTCHA.");
+      return;
+    }
+
+    setIsLoading(true); // Start loading
+    
     try {
       const res = await fetch("https://adminpanel.defencehousingsociety.com/defenceWebsiteRoutes/contactus", {
         method: "POST",
@@ -47,6 +59,8 @@ function ContactForm() {
       }
     } catch (error) {
       toast.error("Something went wrong!");
+    } finally {
+      setIsLoading(false); // Stop loading regardless of success or failure
     }
   };
 
@@ -170,18 +184,31 @@ function ContactForm() {
         </div>
 
         {/* reCAPTCHA and Submit button */}
-        <div className="m-auto flex items-center justify-center mb-4">
-          <div className="g-recaptcha" data-sitekey="6Lf9QMUpAAAAALTTOuMe4_MoVGmF9cwj2NtwsaK_"></div>
+      <div className="m-auto flex items-center justify-center mb-4">
+          {/* <div className="g-recaptcha" data-sitekey="6Lf9QMUpAAAAALTTOuMe4_MoVGmF9cwj2NtwsaK_"></div> */}
+          <div className="g-recaptcha" data-sitekey="6Lc7g3grAAAAAFa7QdypUOuQU1mVB48qZXGzTn9Q"></div>
         </div>
 
         <div className="flex justify-center">
           <div className="relative overflow-hidden w-full md:w-1/4 h-12 group">
             <div className="absolute inset-0 bg-gradient-to-r from-gray-600 via-purple-800 to-cyan-400 transition-all duration-400 -left-full group-hover:left-0"></div>
-            <input 
-              type="submit" 
-              value="Send Message" 
-              className="relative w-full h-full bg-transparent text-white font-medium uppercase tracking-wider cursor-pointer z-10"
-            />
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="relative w-full h-full bg-transparent text-white font-medium uppercase tracking-wider cursor-pointer z-10 flex items-center justify-center"
+            >
+              {isLoading ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                "Send Message"
+              )}
+            </button>
           </div>
         </div>
       </form>
