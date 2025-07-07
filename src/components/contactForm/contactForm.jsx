@@ -185,9 +185,11 @@ const [captchaToken, setCaptchaToken] = useState(null);
 
         {/* reCAPTCHA and Submit button */}
       <div className="m-auto flex items-center justify-center mb-4">
-          {/* <div className="g-recaptcha" data-sitekey="6Lf9QMUpAAAAALTTOuMe4_MoVGmF9cwj2NtwsaK_"></div> */}
-          <div className="g-recaptcha" data-sitekey="6Lc7g3grAAAAAFa7QdypUOuQU1mVB48qZXGzTn9Q"></div>
-        </div>
+  <ReCAPTCHA
+    sitekey="6Lf9QMUpAAAAALTTOuMe4_MoVGmF9cwj2NtwsaK_"
+    onChange={handleCaptchaChange}
+  />
+</div>
 
         <div className="flex justify-center">
           <div className="relative overflow-hidden w-full md:w-1/4 h-12 group">

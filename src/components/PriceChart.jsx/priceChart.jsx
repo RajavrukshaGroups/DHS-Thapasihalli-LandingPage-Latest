@@ -2,7 +2,7 @@ const PriceChart = () => {
   return (
     <div className="px-4 md:pl-20 md:pr-20 py-12 bg-gray-50">
       {/* Title Section */}
-      <h2 className="text-3xl font-bold text-center text-[#24447c] mb-2">PRICE CHART</h2>
+      <h2 className="text-3xl font-bold text-center text-[#24447c] mb-2">Price Chart</h2>
        <p className="italic items-center flex m-auto justify-center mb-8  text-justify   text-base/loose">
         Explore our comprehensive Price Chart to gain insights into the cost structure and pricing details for our offerings.
       </p>
