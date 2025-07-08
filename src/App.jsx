@@ -79,7 +79,6 @@ function App() {
       <div className="pt-28 md:pt-0 w-full relative">
         {/* Image */}
         <img src={Banner} alt="banner_logo" className="w-full h-auto" />
-
         {/* Overlay with light transparent background */}
         <div className="absolute bottom-0 left-0 w-full bg-[rgba(0,0,0,0.6)] py-10 text-center">
           <p className="text-white text-xl md:text-4xl font-semibold drop-shadow-md">
