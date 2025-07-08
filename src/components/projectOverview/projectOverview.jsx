@@ -18,7 +18,7 @@ const ProjectOverview = () => {
 
         {/* Prime Location */}
         <div>
-          <h3 className="text-3xl font-semibold mb-3  flex justify-center items-center">Prime Location</h3>
+          <h3 className="text-3xl font-bold text-center text-[#24447c] mb-3">Prime Location</h3>
           <p className="italic text-justify text-base/loose">
             Situated in North Bangalore, Defence Habitat Tapasihalli is strategically positioned in close proximity to the airport, upcoming 10,000 acres of ITIR/SEZ projects, and KIADB areas, ensuring a thriving economic environment. This location not only provides convenient access to workplaces but also promises a significant appreciation in property value, making it a lucrative investment for the future.
           </p>
@@ -26,7 +26,8 @@ const ProjectOverview = () => {
 
         {/* Unmatched Connectivity */}
         <div>
-          <h3 className="text-3xl font-semibold mb-3 flex items-center justify-center">Unmatched Connectivity</h3>
+          {/* <h3 className="text-3xl font-semibold mb-3 flex items-center justify-center">Unmatched Connectivity</h3> */}
+          <h3 className="text-3xl font-bold text-center text-[#24447c] mb-3">Unmatched Connectivity</h3>
           <p className="italic text-justify text-base/loose">
             Our project boasts excellent connectivity to key areas of Bangalore. With well-developed roads and upcoming infrastructure projects, residents can enjoy seamless travel to the city center, airports, educational institutions, healthcare facilities, and shopping destinations.
           </p>

@@ -12,7 +12,9 @@ import ChildrenPlayArea from "../../assets/seesaw_13936783.gif"
 function Amenities() {
   return (
     <>
-      <h1 className='justify-center text-3xl font-semibold items-center flex p-7'>MODERN AMENITIES</h1>
+      {/* <h1 className='justify-center text-3xl font-semibold items-center flex p-7'>MODERN AMENITIES</h1> */}
+      <h1 className='text-3xl font-bold text-center text-[#24447c] mb-2 p-7'>Modern Amenities</h1>
+    
       <div className="pb-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-8 sm:px-24 max-w-6xl mx-auto">
         {/* Card 1 */}
         <div className="bg-gray-50 h-40 flex flex-col items-center w-full p- rounded-3xl shadow-[2px_2px_8px_rgba(0,0,0,0.15),-3px_-3px_10px_rgba(0,0,0,0.1)] transition-transform duration-400 hover:scale-[0.98] hover:shadow-[1px_1px_5px_1px_rgba(0,0,0,0.15),-3px_-3px_10px_3px_rgba(0,0,0,0.1)] overflow-hidden">

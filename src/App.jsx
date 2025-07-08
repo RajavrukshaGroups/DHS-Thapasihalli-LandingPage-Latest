@@ -10,6 +10,7 @@ import Footer from "./components/footer/footer";
 import ContactForm from "./components/contactForm/contactForm";
 import { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
+import ContactFormPopup from './components/contactFormPopup';
 function App() {
   // console.log()
   return (
@@ -73,6 +74,7 @@ function App() {
         </script>
       </Helmet>
       <Toaster position="top-right" reverseOrder={false} />
+      <ContactFormPopup/>
       <Header />
       <div className="pt-28 md:pt-0 w-full relative">
         {/* Image */}
