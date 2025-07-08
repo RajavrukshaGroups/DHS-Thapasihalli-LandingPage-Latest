@@ -1,6 +1,7 @@
-import { Phone, Mail, Twitter, Facebook, Instagram, MessageCircle, Youtube } from "lucide-react"
-
-const Footer=()=> {
+import { Phone, Mail } from "lucide-react";
+import { FaTwitter, FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+const Footer = () => {
   return (
     <footer className="bg-gray-100 py-12">
       <div className="max-w-7xl mx-auto px-6">
@@ -21,7 +22,8 @@ const Footer=()=> {
                 <div className="flex items-center gap-2 text-gray-700">
                   <Phone className="w-4 h-4" />
                   <span className="font-medium">Phone:</span>
-                  <span>+91-8884 735 735</span>
+                  <span >+91-8884735735</span>
+                  <span>+91-8188992266</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
                   <Mail className="w-4 h-4" />
@@ -49,36 +51,62 @@ const Footer=()=> {
             {/* Social Networks */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-800">Our Social Networks</h3>
-              <div className="flex gap-3">
-                <a
-                  href="https://twitter.com/DefenceSociety"
-                  className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center text-white hover:bg-blue-500 transition-colors"
+              <div className="flex gap-4">
+                {/* Twitter */}
+                {/* <a 
+                  href="https://twitter.com/DefenceSociety" 
+                  className="relative group w-10 h-10 flex items-center justify-center"
+                  aria-label="Twitter"
                 >
-                  <Twitter className="w-5 h-5" />
+                  <div className="absolute inset-0 bg-white rounded-full shadow-md transition-all duration-300 group-hover:bg-[#1DA1F2] group-hover:scale-110"></div>
+                  <FaTwitter className="relative text-[#1DA1F2] text-xl group-hover:text-white transition-colors duration-300" />
+                </a> */}
+                <a 
+                    href="https://twitter.com/DefenceSociety" 
+                    className="relative group w-10 h-10 flex items-center justify-center"
+                    aria-label="X (formerly Twitter)"
+                  >
+                    <div className="absolute inset-0 bg-white rounded-full shadow-md transition-all duration-300 group-hover:bg-black group-hover:scale-110"></div>
+                    <FaXTwitter className="relative text-black text-xl group-hover:text-white transition-colors duration-300" />
+                  </a>
+                {/* Facebook */}
+                <a 
+                  href="https://www.facebook.com/defencehabitat" 
+                  className="relative group w-10 h-10 flex items-center justify-center"
+                  aria-label="Facebook"
+                >
+                  <div className="absolute inset-0 bg-white rounded-full shadow-md transition-all duration-300 group-hover:bg-[#4267B2] group-hover:scale-110"></div>
+                  <FaFacebookF className="relative text-[#4267B2] text-xl group-hover:text-white transition-colors duration-300" />
                 </a>
-                <a
-                  href="https://www.facebook.com/defencehabitat"
-                  className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+
+                {/* Instagram */}
+             <a 
+                  href="https://www.instagram.com/accounts/login/?next=/defence_habitat/" 
+                  className="relative group w-10 h-10 flex items-center justify-center"
+                  aria-label="Instagram"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <div className="absolute inset-0 bg-white rounded-full shadow-md transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#fdf497] group-hover:via-[#fd5949] group-hover:to-[#d6249f] group-hover:scale-110"></div>
+                  <FaInstagram className="relative text-xl transition-colors duration-300 text-[#E1306C] group-hover:text-white" />
                 </a>
-                <a
-                  href="https://www.instagram.com/accounts/login/?next=/defence_habitat"
-                  className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white hover:from-purple-600 hover:to-pink-600 transition-colors"
+
+                {/* WhatsApp */}
+                <a 
+                  href="https://api.whatsapp.com/send/?phone=918884413931&text&app_absent=0" 
+                  className="relative group w-10 h-10 flex items-center justify-center"
+                  aria-label="WhatsApp"
                 >
-                  <Instagram className="w-5 h-5" />
+                  <div className="absolute inset-0 bg-white rounded-full shadow-md transition-all duration-300 group-hover:bg-[#25D366] group-hover:scale-110"></div>
+                  <FaWhatsapp className="relative text-[#25D366] text-xl group-hover:text-white transition-colors duration-300" />
                 </a>
-                <a
-                  href="https://api.whatsapp.com/send/?phone=918884413931&text&app_absent=0"
-                  className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white hover:bg-green-600 transition-colors"
+
+                {/* YouTube */}
+                <a 
+                  href="https://www.youtube.com/@defencehabitathousingsocie1590" 
+                  className="relative group w-10 h-10 flex items-center justify-center"
+                  aria-label="YouTube"
                 >
-                  <MessageCircle className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.youtube.com/@defence_habitat"
-                  className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white hover:bg-red-700 transition-colors"
-                >
-                  <Youtube className="w-5 h-5" />
+                  <div className="absolute inset-0 bg-white rounded-full shadow-md transition-all duration-300 group-hover:bg-[#FF0000] group-hover:scale-110"></div>
+                  <FaYoutube className="relative text-[#FF0000] text-xl group-hover:text-white transition-colors duration-300" />
                 </a>
               </div>
             </div>
@@ -91,7 +119,7 @@ const Footer=()=> {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
