@@ -1,6 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import ReCAPTCHA from "react-google-recaptcha";
+
 function ContactForm() {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -11,28 +11,20 @@ function ContactForm() {
     subject: "Thapasihalli",
   });
   const [isLoading, setIsLoading] = useState(false);
-const [captchaToken, setCaptchaToken] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-    const handleCaptchaChange = (token) => {
-    setCaptchaToken(token);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!captchaToken) {
-      toast.error("Please complete the CAPTCHA.");
-      return;
-    }
 
     setIsLoading(true); // Start loading
     
     try {
-      const res = await fetch("https://adminpanel.defencehousingsociety.com/defenceWebsiteRoutes/contactus", {
+      const res = await fetch("http://localhost:4000/defenceWebsiteRoutes/new-contactus", {
+      // const res = await fetch("https://adminpanel.defencehousingsociety.com/defenceWebsiteRoutes/new-contactus", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -182,14 +174,6 @@ const [captchaToken, setCaptchaToken] = useState(null);
         <div id="error-message" className="hidden text-red-500 mb-4">
           There was an issue submitting the form. Please try again later.
         </div>
-
-        {/* reCAPTCHA and Submit button */}
-      <div className="m-auto flex items-center justify-center mb-4">
-  <ReCAPTCHA
-    sitekey="6Lf9QMUpAAAAALTTOuMe4_MoVGmF9cwj2NtwsaK_"
-    onChange={handleCaptchaChange}
-  />
-</div>
 
         <div className="flex justify-center">
           <div className="relative overflow-hidden w-full md:w-1/4 h-12 group">

@@ -27,7 +27,6 @@ function App() {
           name="keywords"
           content="Plots for sale in Tapasihalli, residential plots in North Bangalore, defence housing plots in Bangalore, Doddaballapur plots, investment plots near Bangalore airport, plots near Kempegowda airport, weekend home plots near Bangalore, organic farming plots in Bangalore, defence personnel plots, gated community plots, North Bangalore real estate"
         />
-
         <link
           rel="canonical"
           href="https://defencehabitat-tapasihalli.defencehousingsociety.com/"
@@ -129,6 +128,7 @@ function App() {
       </div>
       <ContactForm />
       <Footer />
+      
     </>
   );
 }
