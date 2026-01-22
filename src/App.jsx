@@ -73,7 +73,7 @@ function App() {
         </script>
       </Helmet>
       <Toaster position="top-right" reverseOrder={false} />
-      <ContactFormPopup/>
+      {/* <ContactFormPopup/> */}
       <Header />
       <div className="pt-28 md:pt-0 w-full relative">
         {/* Image */}
