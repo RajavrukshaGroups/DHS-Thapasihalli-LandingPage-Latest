@@ -10,7 +10,7 @@ import Footer from "./components/footer/footer";
 import ContactForm from "./components/contactForm/contactForm";
 import { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
-import ContactFormPopup from './components/contactFormPopup';
+import ContactFormPopup from "./components/contactFormPopup";
 function App() {
   // console.log()
   return (
@@ -105,12 +105,31 @@ function App() {
         <h2 className="text-3xl font-bold text-center text-[#24447c] mb-2">
           Conclusion
         </h2>
-        <p className="italic text-justify  text-1xl text-base/loose">
+        {/* <p className="italic text-justify  text-1xl text-base/loose">
           Experience the perfect harmony of urban convenience and serene living
           at Defence Habitat. Whether you are looking to build your dream home
           or seeking a promising investment opportunity, our residential layout
           project in North Bangalore is your gateway to a prosperous future.
           Join us and be a part of this thriving community today.
+        </p> */}
+        <p className="italic text-justify text-1xl text-base/loose">
+          Experience the perfect harmony of urban convenience and serene living
+          at Defence Habitat. Whether you are looking to build your dream home
+          or seeking a promising investment opportunity, our residential layout
+          project in North Bangalore is your gateway to a prosperous future.
+          Explore{" "}
+          <span className="text-[#24447c] font-semibold">
+            plots for sale in North Bangalore
+          </span>
+          ,{" "}
+          <span className="text-[#24447c] font-semibold">
+            villa plots for sale in Doddaballapur
+          </span>
+          , and{" "}
+          <span className="text-[#24447c] font-semibold">
+            residential villa plots for sale in North Bangalore
+          </span>
+          . Join us and be a part of this thriving community today.
         </p>
       </div>
       <h2 className="text-3xl font-bold text-center text-[#24447c] mb-2">
@@ -128,7 +147,6 @@ function App() {
       </div>
       <ContactForm />
       <Footer />
-      
     </>
   );
 }
