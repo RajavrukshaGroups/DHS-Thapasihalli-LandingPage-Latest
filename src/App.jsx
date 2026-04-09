@@ -10,7 +10,8 @@ import Footer from "./components/footer/footer";
 import ContactForm from "./components/contactForm/contactForm";
 import { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
-import ContactFormPopup from "./components/contactFormPopup";
+import ContactFormPopup from "./components/contactFormPopup"; 
+import StickyContactForm from "./components/contactForm/StickyContactForm";
 function App() {
   // console.log()
   return (
@@ -85,6 +86,8 @@ function App() {
           </p>
         </div>
       </div>
+      <ContactFormPopup />
+      {/* <StickyContactForm /> */}
       <ProjectOverview />
       <LocationAdvantage />
 
